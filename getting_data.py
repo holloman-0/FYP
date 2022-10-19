@@ -4,8 +4,7 @@ import os
 import mysql.connector
 
 urls = {'Crime': "https://www.kaggle.com/datasets/marshallproject/crime-rates/download?datasetVersionNumber=1",
-        'Macro': "https://www.kaggle.com/datasets/sarthmirashi07/us-macroeconomic-data/download?datasetVersionNumber=1 ",
-        'Wage': 'https://www.kaggle.com/datasets/lislejoem/us-minimum-wage-by-state-from-1968-to-2017/download?datasetVersionNumber=4'}
+        'Alcohol' : 'https://www.kaggle.com/datasets/linzey/alcohol-consumption-us/download?datasetVersionNumber=1'}
 
 # Zipped files will be put in current directory
 def get_zipped_file():
@@ -38,9 +37,3 @@ def unzip():
             zip_ref.extractall() # extract file to dir
             zip_ref.close() # close file
             os.remove(item) # delete zipped file
-
-
-# Flow of the program
-
-#zipped_files = get_zipped_file()
-#unzip_files = unzip()
